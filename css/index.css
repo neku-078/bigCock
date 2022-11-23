@@ -1,0 +1,108 @@
+body{
+	margin: 0px;
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), 
+					  url('../images/background/index.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: center;
+	height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(5px);
+}
+
+.title h1 {
+    font-weight: normal;
+	text-align: center;
+    font-family: titleFont;
+	font-size: 150px;
+	color: #FFFFFF;
+	display: block;
+}
+
+
+.menu {
+    list-style: none inside;
+	font-family: menuFont;
+	font-size: 20px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 0;
+}
+
+.menu ul {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    width: 210px;
+    line-height: 45px;
+    text-align: center;
+    display: block;
+    position: relative;
+    float: left;
+    color: #FFFFFF;
+}
+
+.menu ul li ul {
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    min-width: 200px;
+}
+
+.menu ul li ul li {
+	background-color: rgba(50, 50, 50, 0.5);
+}
+
+.menu ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.menu ul li:hover, .menu ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #E69966;
+}
+
+.menu ul li:hover > ul ,.menu ul li ul:hover {
+    visibility: visible;
+    display: block;
+}
+
+@font-face {
+	font-family: 'titleFont';
+	src: url('../font/AnakCute.ttf');
+}
+
+@font-face {
+	font-family: 'menuFont';
+	src: url('../font/HanyiSentyMarshmallow.ttf');
+}
+
+@keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translate3d(0, 40px, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}

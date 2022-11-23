@@ -1,0 +1,177 @@
+body {
+    margin: 0px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), 
+                      url('../images/background/game.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 2% 0px;
+    height: 92vh;
+}
+
+.text {
+    width: 90%;
+    height: 90%;
+    padding: 2% 5%;
+    text-align: center;
+    background-image: url('../images/gameObject/cocktail.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%, 40%;
+}
+
+.text div {
+    height: 100%;
+    padding: 1px 0;
+    margin: 1% 0;
+    background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(1px);
+}
+
+.text h1 {
+    font-weight: normal;
+    font-size: 60px;
+}
+
+.text h2 {
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.text p {
+    font-size: 35px;
+}
+
+.text a {
+    font-size: 25px;
+    text-decoration: none;
+    vertical-align: sub;
+}
+
+.text img {
+    margin: 12% 0 0 0;
+    width: 35%;
+}
+
+.text h1, .text h2, .text p, .text a {
+    color: white;
+    font-family: chalk;
+}
+
+hr {
+    display: block;
+    width: 98%;
+    height: 50px;
+    margin: 0 1%;
+    border: 0;
+    background: url('../images/hrBar.png') no-repeat top center;
+    background-size: contain; 
+    position: relative; 
+}
+
+@keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translate3d(0, 40px, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+  
+@font-face {
+    font-family: 'chalk';
+    src: url('../font/HanyiSentyMarshmallow.ttf');
+}
+
+@keyframes lightSpeedInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0) skewX(30deg);
+      opacity: 0;
+    }
+  
+    60% {
+      transform: skewX(-20deg);
+      opacity: 1;
+    }
+  
+    80% {
+      transform: skewX(5deg);
+    }
+  
+    to {
+      transform: translate3d(1, 1, 1);
+      opacity: 1;
+    }
+}
+  
+.lightSpeedIn {
+	  opacity: 0;
+    animation-name: lightSpeedInLeft;
+    animation-timing-function: ease-out;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+}
+
+@keyframes flipInY {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+      }
+    
+      40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        animation-timing-function: ease-in;
+      }
+    
+      60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+      }
+    
+      80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      }
+    
+      to {
+        transform: perspective(400px);
+        opacity: 1;
+      }
+}
+  
+.flipIn {
+    backface-visibility: visible !important;
+    animation-name: flipInY;
+	  animation-duration: 1.2s;
+	  animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}

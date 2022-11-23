@@ -1,0 +1,59 @@
+body {
+    margin: 0px;
+    background-image: url('../images/background/about.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.text div {
+    width: 95%;
+	margin: 2% 2.5%;
+}
+
+p {
+	font-family: chalk;
+	color: white;
+	display: block; 
+	animation: fadein 3s ease;
+}
+
+.text {
+    width: 90%;
+    margin: 0% 5%;
+    padding: 2% 0;
+    background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(20px);
+}
+
+.title {
+	text-align: center;
+	font-size: 40px;
+}
+
+.content {
+	text-align: left;
+	font-size: 30px;
+}
+
+hr {
+    display: block;
+    width: 98%;
+    height: 50px;
+    margin: 0 1%;
+    border: 0;
+    background: url('../images/hrBar.png') no-repeat top center;
+    background-size: contain; 
+    position: relative; 
+	animation: fadein 3s ease;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+  
+@font-face {
+    font-family: 'chalk';
+    src: url('../font/HanyiSentyMarshmallow.ttf');
+}

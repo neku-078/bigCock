@@ -1,0 +1,138 @@
+body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-image: url('../images/cocktail/vodkaLime.jpg');
+	margin: 5% 0px;
+}
+
+.type {
+	height: auto;
+	width: 15%;
+	float: left;
+	background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+}
+
+.type ul{
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.type ul li{
+	width: 200px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+.type ul li a{
+	color: white;
+	font-size: 30px;
+	font-family: chalk;
+	text-decoration: none;
+}
+
+.introInfo {
+	margin-left: 10%;
+}
+
+.intro {
+	margin-top: 25%;
+	margin-left: 10%;
+}
+
+.intro , .introInfo{
+	height: auto; 
+	width: 28%;
+	float: left;
+	padding: 0 1%;
+    background-color: rgba(0,0,0,0.5);
+	backdrop-filter: blur(10px);
+}
+
+.intro p, .introInfo p{
+	font-size: 30px;
+	font-family: chalk;
+	color: white;
+}
+
+.photo {
+	height: 200px;
+	width: 25%; 
+	float: left;
+	text-align: center;
+}
+
+.photo img {
+	width: 60%;
+}
+
+@font-face {
+    font-family: 'chalk';
+    src: url('../font/HanyiSentyMarshmallow.ttf');
+}
+
+@keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translate3d(0, 40px, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeIn {
+	opacity: 0;
+	animation-name: fadeInUp;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes bounceIn {
+	from, 20%, 40%, 60%, 80%,
+	to {
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+
+	20% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+
+	40% {
+		transform: scale3d(0.9, 0.9, 0.9);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(1.03, 1.03, 1.03);
+	}
+
+	80% {
+		transform: scale3d(0.97, 0.97, 0.97);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.bounceIn {
+	opacity: 0;
+	animation-name: bounceIn;
+	animation-duration: 0.85s;
+	animation-fill-mode: both;
+}
